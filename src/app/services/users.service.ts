@@ -37,7 +37,7 @@ export class UsersService {
         this._api.getUsers()
             .pipe(
                 tap(res => this.users = res),
-                tap(() => !!this.urlSortingParams ? this.filterUsersBy(this.urlSortingParams) : this.users$.next(this.users))
+                tap(() => this.filterUsersBy(!!this.urlSortingParams ? this.urlSortingParams : 'email'))
             )
             .subscribe()
     }
