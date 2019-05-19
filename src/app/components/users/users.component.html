@@ -1,0 +1,19 @@
+<section class="user">
+    <div class="user_action">
+        <button class="button" [routerLink]="['/create']">Add user</button>
+    </div>
+    <div class="user_item header">
+        <div class="user_item_id" (click)="filterUser('id')">ID</div>
+        <div class="user_item_name" (click)="filterUser('userName')">User name</div>
+        <div class="user_item_email" (click)="filterUser('email')">Email</div>
+        <div class="user_item_phone" (click)="filterUser('phone')">Phone</div>
+        <div class="user_item_birthday" (click)="filterUser('birthday')">Birthday</div>
+    </div>
+    <div class="user_item" *ngFor="let item of users">
+        <div class="user_item_id">{{ item.id }}</div>
+        <div class="user_item_name">{{ item.userName }}</div>
+        <div class="user_item_email">{{ item.email }}</div>
+        <div class="user_item_phone">{{ item.phone }}</div>
+        <div class="user_item_birthday">{{ item.birthday | date : 'mediumDate' }}</div>
+    </div>
+</section>

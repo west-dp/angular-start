@@ -1,0 +1,32 @@
+$border-color = alpha(#000, 0.5);
+
+.user
+	padding 50px 25px
+	&_item
+		display flex
+		border 1px solid  $border-color
+		transition 0.3s all
+		&:hover
+			background-color $border-color
+			color white
+			cursor: pointer
+		&.header
+			font-weight bold
+			&:hover
+				background none
+				color black
+		& > div
+			padding 10px
+			border-right 1px solid $border-color
+		&_id
+			flex-basis 10%
+		&_name
+			flex-basis 20%
+		&_email
+			flex-basis 30%
+		&_phone
+			flex-basis 20%
+		&_birthday
+			flex-basis 20%
+	&_action
+		margin-bottom 30px

@@ -1,6 +1,5 @@
 {
   "users": [
-    [
       {
         "id": 1,
         "userName": "Elsie Lahive",
@@ -72,5 +71,4 @@
         "phone": "(602) 7289939"
       }
     ]
-  ]
 }

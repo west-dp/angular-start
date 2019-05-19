@@ -1,0 +1,20 @@
+<form class="create" [formGroup]=form>
+    <h3 class="create_title">Create a new user:</h3>
+    <div class="create_block">
+        <label class="create_label">User name</label>
+        <input type="text" name="userName" placeholder="Enter your name..." formControlName="userName">
+    </div>
+    <div class="create_block">
+        <label class="create_label">Email</label>
+        <input type="email" name="email" placeholder="Enter your email..." formControlName="email">
+    </div>
+    <div class="create_block">
+        <label class="create_label">Phone</label>
+        <input type="phone" name="phone" placeholder="Enter your phone..." formControlName="phone">
+    </div>
+    <div class="create_block">
+        <label class="create_label">Birthday</label>
+        <input type="date" name="birthday" formControlName="birthday">
+    </div>
+    <button class="button" [disabled]="form.invalid" (click)="create()">Create</button>
+</form>
